@@ -25,28 +25,31 @@ body {
   align-items: center;
 }
 
-.petButtons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @keyframes petMove {
-  from {left: 30%;}
-  to {left: 65%;}
+  from {left: 0%;}
+  to {left: 100%;}
 }
   
 .petImg {
   max-width: 80px;
   position: relative;
   animation-name: petMove;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   display: flex;
   flex-direction: row-reverse;
+}
+
+.container {
   display: flex;
+  flex-direction: column;
+  padding: 222px;
   justify-content: center;
   align-items: center;
 }
 
+.petStats {
+  background-color: burlywood;
+  border: solid 2px brown;
+}

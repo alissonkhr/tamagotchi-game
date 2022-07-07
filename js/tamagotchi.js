@@ -1,14 +1,42 @@
-const pet = {
-    name: '',
-    hunger: 1,
-    sleepiness: 1,
-    boredom: 1,
-    age: 1
+class Pet {
+    constructor(name, hunger, sleepiness, boredom, age){
+        this.name = name;
+        this.hunger = hunger;
+        this.sleepiness = sleepiness;
+        this.boredom = boredom;
+        this.age = age;
+    }
 }
 
-console.log(pet);
+// Pet Class created
 
-// document.getElementById('startButton').addEventListener('click', startGame)
-// document.getElementById('feedMeButton').addEventListener('click', feedPet)
-// document.getElementById('playButton').addEventListener('click', playWithPet)
-// document.getElementById('sleepButton').addEventListener('click', petSleeps)
+class Pokemon extends Pet {
+    constructor(name, hunger, sleepiness, boredom, age){
+        super(name, hunger, sleepiness, boredom, age)
+        this.name = name;
+        this.hunger = 1;
+        this.sleepiness = 1;
+        this.boredom = 1;
+        this.age = 1;
+    }
+    feedPet(){
+        this.hunger += 1;
+    }
+    petSleeps(){
+        this.sleepiness -= 1;
+    }
+    playWithPet(){
+       this.boredom -= 1;
+    }
+}
+
+console.log(Pet);
+
+console.log(Pokemon);
+
+const startButton = document.querySelector('#startButton');
+const feedButton = document.querySelector('#feedMeButton');
+const playButton = document.querySelector('#playButton');
+const sleepButton = document.querySelector('#sleepButton');
+const pokePet = new Pokemon ('');
+
