@@ -1,0 +1,26 @@
+.gameTitle {
+    text-align: center;
+}
+
+body {
+    background-image: url('/images/animalcrossingbg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+@keyframes petMove {
+    from {left: 30%;}
+    to {left: 70%;}
+  }
+  
+.petImg {
+    max-width: 80px;
+    position: relative;
+    animation-name: petMove;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    display: flex;
+    flex-direction: row-reverse;
+  }
