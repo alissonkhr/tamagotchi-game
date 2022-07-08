@@ -85,7 +85,7 @@ const tamaGame = {
 
             if(pokePet.sleepiness >= 10){
                 alert(`Oh no! ${pokePet.name} fainted from sleepiness, and the game is over.`);
-                clearInterval(playInt);
+                clearInterval(sleepInt);
             }
         }, 5000)
         sleepButton.addEventListener('click', () => {
@@ -93,5 +93,28 @@ const tamaGame = {
             const sleepinessIDStat = document.querySelector('#sleepiness');
             sleepinessIDStat.innerText = `Sleepiness: ${pokePet.sleepiness}`;
         })
+    },
+
+    ageStat(){
+        const ageInt = setInterval(() => {
+            const ageIDStat = document.querySelector('#age');
+            ageIDStat.innerText = `Age: ${pokePet.age}`;
+            pokePet.age += 1;
+
+            if(pokePet.age === 3){
+                confirm(`Wow! ${pokePet.name} reached age 3, they are evolving.`);
+                document.querySelector('.petImg').src = 'images/quilava.gif';
+            }
+
+            if(pokePet.age === 5){
+                confirm(`Wow! ${pokePet.name} reached age 5, they are evolving.`);
+                document.querySelector('.petImg').src = 'images/typhlosion.gif';
+            }
+
+            if(pokePet.age >= 10){
+                alert(`${pokePet.name} is too old to keep playing with you, and the game is over.`);
+                clearInterval(ageInt);
+            }
+        }, 8000)
     }
 }
