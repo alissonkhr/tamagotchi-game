@@ -52,5 +52,12 @@ const tamaGame = {
                 clearInterval(hungerInt);
             }
         }, 5000)
-    }
+        feedButton.addEventListener('click', () => {
+            pokePet.feedPet();
+            const hungerIDStat = document.querySelector('#hunger');
+            hungerIDStat.innerText = `Hunger: ${pokePet.hunger}`;
+        })
+    },
+
+    
 }
