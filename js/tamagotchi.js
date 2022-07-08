@@ -40,7 +40,7 @@ const playButton = document.querySelector('#playButton');
 const sleepButton = document.querySelector('#sleepButton');
 const pokePet = new Pokemon ('');
 
-const tamaGame = {
+const pokeGame = {
     hungerStat(){
         const hungerInt = setInterval(() => {
             const hungerIDStat = document.querySelector('#hunger');
@@ -124,5 +124,12 @@ const tamaGame = {
         nameStat.innerText = `My Pet ${pokePet.name}`;
     },
 
-    
+    startGame(){
+        pokeGame.setPetName();
+        pokeGame.hungerStat();
+        pokeGame.playStat();
+        pokeGame.sleepStat();
+        pokeGame.ageStat();
+    }
 }
+
