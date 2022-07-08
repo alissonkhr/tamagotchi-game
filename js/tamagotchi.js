@@ -20,7 +20,7 @@ class Pokemon extends Pet {
         this.age = 1;
     }
     feedPet(){
-        this.hunger += 1;
+        this.hunger -= 1;
     }
     petSleeps(){
         this.sleepiness -= 1;
@@ -40,3 +40,17 @@ const playButton = document.querySelector('#playButton');
 const sleepButton = document.querySelector('#sleepButton');
 const pokePet = new Pokemon ('');
 
+const tamaGame = {
+    hungerStat(){
+        const hungerInt = setInterval(() => {
+            const hungerIDStat = document.querySelector('#hunger');
+            hungerIDStat.innerText = `Hunger: ${pokePet.hunger}`;
+            pokePet.hunger += 1;
+
+            if(pokePet.hunger === 10){
+                alert(`Oh no! ${pokePet.name} fainted, and the game is over.`);
+                clearInterval(hungerInt);
+            }
+        }, 5000)
+    }
+}
