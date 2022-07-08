@@ -47,7 +47,7 @@ const tamaGame = {
             hungerIDStat.innerText = `Hunger: ${pokePet.hunger}`;
             pokePet.hunger += 1;
 
-            if(pokePet.hunger === 10){
+            if(pokePet.hunger >= 10){
                 alert(`Oh no! ${pokePet.name} fainted, and the game is over.`);
                 clearInterval(hungerInt);
             }
@@ -59,5 +59,16 @@ const tamaGame = {
         })
     },
 
-    
+    playStat(){
+        const playInt = setInterval(() => {
+            const boredomIDStat = document.querySelector('#boredom');
+            boredomIDStat.innerText = `Boredom: ${pokePet.boredom}`;
+            pokePet.boredom += 1;
+
+            if(pokePet.boredom >= 10){
+                alert(`Oh no! ${pokePet.name} fainted, and the game is over.`);
+                clearInterval(playInt);
+            }
+        }, 5000)
+    }
 }
