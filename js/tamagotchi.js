@@ -133,3 +133,7 @@ const pokeGame = {
     }
 }
 
+startButton.addEventListener('click', () => {
+    pokeGame.startGame();
+});
+
