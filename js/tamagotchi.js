@@ -48,7 +48,7 @@ const tamaGame = {
             pokePet.hunger += 1;
 
             if(pokePet.hunger >= 10){
-                alert(`Oh no! ${pokePet.name} fainted, and the game is over.`);
+                alert(`Oh no! ${pokePet.name} fainted from hunger, and the game is over.`);
                 clearInterval(hungerInt);
             }
         }, 5000)
@@ -66,7 +66,7 @@ const tamaGame = {
             pokePet.boredom += 1;
 
             if(pokePet.boredom >= 10){
-                alert(`Oh no! ${pokePet.name} fainted, and the game is over.`);
+                alert(`Oh no! ${pokePet.name} fainted from boredom, and the game is over.`);
                 clearInterval(playInt);
             }
         }, 5000)
@@ -77,5 +77,16 @@ const tamaGame = {
         })
     },
 
-    
+    sleepStat(){
+        const sleepInt = setInterval(() => {
+            const sleepinessIDStat = document.querySelector('#sleepiness');
+            sleepinessIDStat.innerText = `Sleepiness: ${pokePet.sleepiness}`;
+            pokePet.sleepiness += 1;
+
+            if(pokePet.sleepiness >= 10){
+                alert(`Oh no! ${pokePet.name} fainted from sleepiness, and the game is over.`);
+                clearInterval(playInt);
+            }
+        }, 5000)
+    }
 }
