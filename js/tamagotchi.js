@@ -116,5 +116,13 @@ const tamaGame = {
                 clearInterval(ageInt);
             }
         }, 8000)
-    }
+    },
+
+    setPetName(){
+        pokePet.name = prompt('What will you be naming your pet?', 'Cyndaquil');
+        const nameStat = document.querySelector('.gameTitle');
+        nameStat.innerText = `My Pet ${pokePet.name}`;
+    },
+
+    
 }
