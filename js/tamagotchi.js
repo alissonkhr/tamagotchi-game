@@ -70,5 +70,12 @@ const tamaGame = {
                 clearInterval(playInt);
             }
         }, 5000)
-    }
+        playButton.addEventListener('click', () => {
+            pokePet.playWithPet();
+            const boredomIDStat = document.querySelector('#boredom');
+            boredomIDStat.innerText = `Boredom: ${pokePet.boredom}`;
+        })
+    },
+
+    
 }
