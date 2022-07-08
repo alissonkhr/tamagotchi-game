@@ -88,5 +88,10 @@ const tamaGame = {
                 clearInterval(playInt);
             }
         }, 5000)
+        sleepButton.addEventListener('click', () => {
+            pokePet.petSleeps();
+            const sleepinessIDStat = document.querySelector('#sleepiness');
+            sleepinessIDStat.innerText = `Sleepiness: ${pokePet.sleepiness}`;
+        })
     }
 }
