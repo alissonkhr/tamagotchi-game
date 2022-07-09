@@ -1,28 +1,27 @@
 html, body {
   height: 100%;
-  width: 100%;
-  margin: 0 0 0 0;
 }
 
-.gameTitle {
-  text-align: center;
+.bg-img {
+  max-width: 100%;
+  height: auto;
 }
 
 body {
-  top: 0;
-  left: 0;
-  background-image: url('/images/animalcrossingbg.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: yellow;
   text-shadow: 2px 2px goldenrod;
 }
 
-.centeredStart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.gameContainer {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 @keyframes petMove {
@@ -37,14 +36,25 @@ body {
   animation-duration: 3s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  display: flex;
-  flex-direction: row-reverse;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  padding: 222px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeredStart {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
